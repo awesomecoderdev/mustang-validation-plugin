@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Mustang Validation ===
 Contributors: (this should be a list of wordpress.org userid's)
 Donate link: https://google.de/
 Tags: comments, spam
