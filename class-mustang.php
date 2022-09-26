@@ -95,57 +95,11 @@ class Mustang
 	{
 
 		/**
-		 * The class responsible for orchestrating the actions and filters of the
-		 * core plugin.
-		 */
-		require_once MUSTANG_PATH . 'controller/class-awesomecoder-activator.php';
-
-		/**
-		 * The class responsible for orchestrating the actions and filters of the
-		 * core plugin.
-		 */
-		require_once MUSTANG_PATH . 'controller/class-awesomecoder-deactivator.php';
-
-		/**
-		 * The class responsible for orchestrating the actions and filters of the
-		 * core plugin.
-		 */
-		require_once MUSTANG_PATH . 'controller/class-awesomecoder-loader.php';
-
-		/**
-		 * The class responsible for defining internationalization functionality
-		 * of the plugin.
-		 */
-		require_once MUSTANG_PATH . 'controller/class-awesomecoder-i18n.php';
-
-		/**
-		 * The class responsible for defining all actions that occur in the backend area.
-		 */
-		require_once MUSTANG_PATH . 'backend/class-awesomecoder-backend.php';
-
-		/**
-		 * The class responsible for defining all actions that occur in the frontend-facing
+		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once MUSTANG_PATH . 'frontend/class-awesomecoder-frontend.php';
+		require_once("vendor/autoload.php");
 
-		/**
-		 * The class responsible for defining metabox functionality
-		 * of the plugin.
-		 */
-		require_once MUSTANG_PATH . 'controller/class-awesomecoder-shortcode.php';
-
-		/**
-		 * The class responsible for defining metabox functionality
-		 * of the plugin.
-		 */
-		require_once MUSTANG_PATH . 'controller/class-awesomecoder-metabox.php';
-
-		/**
-		 * The class responsible for defining handler functionality
-		 * of the plugin.
-		 */
-		require_once MUSTANG_PATH . 'controller/class-awesomecoder-handler.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
