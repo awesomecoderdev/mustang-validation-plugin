@@ -20,7 +20,7 @@ use Plugin\Controller\Mustang_Shortcode;
  */
 
 // If this file is called directly, abort.
-!defined('WPINC') ? die : include(plugin_dir_path(__FILE__) . 'controller/class-awesomecoder.php');
+!defined('WPINC') ? die : include(plugin_dir_path(__FILE__) . 'controller/class-mustang.php');
 
 /**
  * The core plugin class.
