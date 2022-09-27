@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ajaxurl, awesomecoder, metaFields,states } from './Backend';
+import { ajaxurl, mustang, metaFields,states } from './Backend';
 import { RefreshIcon } from '@heroicons/react/outline';
 import axios from 'axios';
 import { bind } from 'lodash';
@@ -12,17 +12,17 @@ class Metabox extends Component {
         this.state = {
             refresh: false,
             featch: "",
-			awesomecoder_app_icon: states?.awesomecoder_app_icon,
-			awesomecoder_app_downloads: states?.awesomecoder_app_downloads,
-			awesomecoder_app_stars: states?.awesomecoder_app_stars,
-			awesomecoder_app_ratings: states?.awesomecoder_app_ratings,
-			awesomecoder_app_devName: states?.awesomecoder_app_devName,
-			awesomecoder_app_devLink: states?.awesomecoder_app_devLink,
-			awesomecoder_app_compatible_with: states?.awesomecoder_app_compatible_with,
-			awesomecoder_app_size: states?.awesomecoder_app_size,
-			awesomecoder_app_last_version: states?.awesomecoder_app_last_version,
-			awesomecoder_app_link: states?.awesomecoder_app_link,
-			awesomecoder_app_price: states?.awesomecoder_app_price,
+			mustang_app_icon: states?.mustang_app_icon,
+			mustang_app_downloads: states?.mustang_app_downloads,
+			mustang_app_stars: states?.mustang_app_stars,
+			mustang_app_ratings: states?.mustang_app_ratings,
+			mustang_app_devName: states?.mustang_app_devName,
+			mustang_app_devLink: states?.mustang_app_devLink,
+			mustang_app_compatible_with: states?.mustang_app_compatible_with,
+			mustang_app_size: states?.mustang_app_size,
+			mustang_app_last_version: states?.mustang_app_last_version,
+			mustang_app_link: states?.mustang_app_link,
+			mustang_app_price: states?.mustang_app_price,
         }
 
         this.handleFeatchData = this.handleFeatchData.bind(this);
@@ -42,12 +42,12 @@ class Metabox extends Component {
         .then(function (res) {
           const response = res.data;
             self.setState({
-                awesomecoder_app_icon : response?.icon,
-                awesomecoder_app_downloads : response?.downloads,
-                awesomecoder_app_stars : response?.stars,
-                awesomecoder_app_ratings : response?.ratings,
-                awesomecoder_app_devName : response?.devName,
-                awesomecoder_app_devLink : response?.devLink,
+                mustang_app_icon : response?.icon,
+                mustang_app_downloads : response?.downloads,
+                mustang_app_stars : response?.stars,
+                mustang_app_ratings : response?.ratings,
+                mustang_app_devName : response?.devName,
+                mustang_app_devLink : response?.devLink,
             })
             theTitle.textContent=response?.name;
             if(title){
@@ -56,7 +56,7 @@ class Metabox extends Component {
 
             if(response?.name !==""){
                 self.setState({
-                    awesomecoder_app_link: self.state?.featch,
+                    mustang_app_link: self.state?.featch,
                 })
             }
 
@@ -82,7 +82,7 @@ class Metabox extends Component {
                      onChange={event => this.handleChange( "featch", event)}
                      value={this.state?.featch}
                      placeholder="PlayStore App Url" type="text"
-                     className="awesomecoder_app_url block w-screen p-3 border-gray-300/10 shadow-sm transition duration-150 ease-in-out sm:text-sm sm:leading-5 focus:border-primary-300/0 focus:ring focus:ring-primary-200/0 focus:ring-opacity-50" />
+                     className="mustang_app_url block w-screen p-3 border-gray-300/10 shadow-sm transition duration-150 ease-in-out sm:text-sm sm:leading-5 focus:border-primary-300/0 focus:ring focus:ring-primary-200/0 focus:ring-opacity-50" />
                     <span onClick={this.handleFeatchData} className="bg-primary-400 flex justify-around items-center w-1/5 cursor-pointer rounded-r-md">
                         <span className="md:block hidden text-white font-semibold text-sm pointer-events-none ">
                             Featch Data

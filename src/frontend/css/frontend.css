@@ -70,11 +70,11 @@
         @apply bg-primary-200/40;
     }
 
-    .awesomecoder-paginate .page-numbers{
+    .mustang-paginate .page-numbers{
       @apply relative h-10 w-10 px-3 py-1 text-slate-500 font-poppins text-sm font-light bg-white shadow rounded;
     }
 
-    .awesomecoder-paginate .page-numbers.current{
+    .mustang-paginate .page-numbers.current{
       @apply bg-white text-slate-600 transform scale-105 shadow-md;
     }
 

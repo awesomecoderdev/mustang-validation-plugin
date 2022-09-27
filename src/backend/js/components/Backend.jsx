@@ -1,10 +1,10 @@
-export const ajaxurl = awesomecoder.ajaxurl;
-export const metabox = awesomecoder.metabox;
+export const ajaxurl = mustang.ajaxurl;
+export const metabox = mustang.metabox;
 export const metaFields = metabox.fields;
 export const states = metabox.states;
 
 export default {
-    awesomecoder,
+    mustang,
     ajaxurl,
     metabox,
     metaFields,
