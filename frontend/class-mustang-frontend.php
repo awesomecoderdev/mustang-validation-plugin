@@ -102,6 +102,6 @@ class Mustang_Frontend
 			"url" 		=> get_bloginfo('url'),
 			"ajaxurl"	=> admin_url("admin-ajax.php"),
 		));
-		wp_enqueue_script("{$this->plugin_name}-frontend", MUSTANG_URL . 'frontend/js/frontend.js', array('jquery'), (filemtime(MUSTANG_PATH . "frontend/js/frontend.js") ?? $this->version), false);
+		wp_enqueue_script("{$this->plugin_name}-frontend", MUSTANG_URL . 'frontend/js/frontend.js', array('jquery'), (filemtime(MUSTANG_PATH . "frontend/js/frontend.js") ?? $this->version), true);
 	}
 }

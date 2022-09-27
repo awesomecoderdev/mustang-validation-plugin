@@ -70,7 +70,7 @@ class Mustang_Backend
 		$this->version = $version;
 
 		$this->pages = [
-			"toplevel_page_playstore",
+			"toplevel_page_mustang",
 		];
 
 		$this->metabox = [
@@ -87,7 +87,7 @@ class Mustang_Backend
 	 */
 	public function admin_menu()
 	{
-		add_menu_page(__("Mustang Validation", "mustang"), __("Mustang Validation", "mustang"), 'manage_options', 'mustang', array($this, 'menu_activator_callback'), 'dashicons-image-filter', 50);
+		add_menu_page(__("Mustang", "mustang"), __("Mustang", "mustang"), 'manage_options', 'mustang', array($this, 'menu_activator_callback'), 'dashicons-image-filter', 50);
 		add_submenu_page('mustang', __("Dashboard", "mustang"), __("Dashboard", "mustang"), 'manage_options', 'mustang', array($this, 'dashboard_callback'));
 	}
 

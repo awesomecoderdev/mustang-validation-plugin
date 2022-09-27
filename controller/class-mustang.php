@@ -136,12 +136,6 @@ class Mustang
 		require_once MUSTANG_PATH . 'controller/class-mustang-shortcode.php';
 
 		/**
-		 * The class responsible for defining metabox functionality
-		 * of the plugin.
-		 */
-		require_once MUSTANG_PATH . 'controller/class-mustang-metabox.php';
-
-		/**
 		 * The class responsible for defining handler functionality
 		 * of the plugin.
 		 */

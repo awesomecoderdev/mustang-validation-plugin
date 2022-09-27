@@ -6,7 +6,6 @@ use Plugin\Controller\Mustang;
 use Plugin\Controller\Mustang_Activator;
 use Plugin\Controller\Mustang_Deactivator;
 use Plugin\Controller\Mustang_Handler;
-use Plugin\Controller\Mustang_MetaBox;
 use Plugin\Controller\Mustang_Shortcode;
 
 /**
@@ -81,10 +80,6 @@ class Plugin
 
 		// load shortcodes
 		Mustang_Shortcode::run();
-
-		// load metabox
-		$MetaBox = new Mustang_MetaBox();
-		$MetaBox->run();
 
 		// load shortcodes
 		Mustang_Handler::init();
