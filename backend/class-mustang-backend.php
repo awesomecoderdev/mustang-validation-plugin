@@ -87,8 +87,8 @@ class Mustang_Backend
 	 */
 	public function admin_menu()
 	{
-		add_menu_page(__("Playstore", "awesomecoder"), __("Playstore", "awesomecoder"), 'manage_options', 'playstore', array($this, 'menu_activator_callback'), 'dashicons-image-filter', 50);
-		add_submenu_page('playstore', __("Dashboard", "awesomecoder"), __("Dashboard", "awesomecoder"), 'manage_options', 'playstore', array($this, 'dashboard_callback'));
+		add_menu_page(__("Mustang Validation", "mustang"), __("Mustang Validation", "mustang"), 'manage_options', 'mustang', array($this, 'menu_activator_callback'), 'dashicons-image-filter', 50);
+		add_submenu_page('mustang', __("Dashboard", "mustang"), __("Dashboard", "mustang"), 'manage_options', 'mustang', array($this, 'dashboard_callback'));
 	}
 
 	/**
@@ -168,9 +168,9 @@ class Mustang_Backend
 		 * class.
 		 */
 
-		wp_enqueue_script("{$this->plugin_name}", MUSTANG_URL . 'backend/js/init.js', array('jquery'), (filemtime(MUSTANG_PATH . "backend/js/awesomecoder-init.js") ?? $this->version), false);
+		wp_enqueue_script("{$this->plugin_name}", MUSTANG_URL . 'backend/js/init.js', array('jquery'), (filemtime(MUSTANG_PATH . "backend/js/init.js") ?? $this->version), false);
 		// Some local vairable to get ajax url
-		wp_localize_script($this->plugin_name, 'awesomecoder', array(
+		wp_localize_script($this->plugin_name, 'mustang', array(
 			"url" 		=> get_bloginfo('url'),
 			"ajaxurl"	=> admin_url("admin-ajax.php"),
 		));

@@ -72,7 +72,7 @@ class Mustang_Frontend
 		 * class.
 		 */
 
-		wp_enqueue_style("{$this->plugin_name}", MUSTANG_URL . 'frontend/css/frontend.css', array(), (filemtime(MUSTANG_PATH . "frontend/css/awesomecoder-frontend.css") ?? $this->version), 'all');
+		wp_enqueue_style("{$this->plugin_name}", MUSTANG_URL . 'frontend/css/frontend.css', array(), (filemtime(MUSTANG_PATH . "frontend/css/frontend.css") ?? $this->version), 'all');
 	}
 
 	/**
@@ -95,10 +95,10 @@ class Mustang_Frontend
 		 * class.
 		 */
 
-		wp_enqueue_script("{$this->plugin_name}", MUSTANG_URL . 'frontend/js/init.js', array('jquery'), (filemtime(MUSTANG_PATH . "frontend/js/awesomecoder-init.js") ?? $this->version), false);
+		wp_enqueue_script("{$this->plugin_name}", MUSTANG_URL . 'frontend/js/init.js', array('jquery'), (filemtime(MUSTANG_PATH . "frontend/js/init.js") ?? $this->version), false);
 		wp_enqueue_script("{$this->plugin_name}-jquery", MUSTANG_URL . 'assets/js/jquery-2.0.3.js', array('jquery'), null, false);
 		// Some local vairable to get ajax url
-		wp_localize_script($this->plugin_name, 'awesomecoder', array(
+		wp_localize_script($this->plugin_name, 'mustang', array(
 			"url" 		=> get_bloginfo('url'),
 			"ajaxurl"	=> admin_url("admin-ajax.php"),
 		));

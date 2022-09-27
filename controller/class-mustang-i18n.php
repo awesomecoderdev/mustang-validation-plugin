@@ -29,7 +29,7 @@ class Mustang_i18n
 	{
 
 		load_plugin_textdomain(
-			'awesomecoder',
+			'mustang',
 			false,
 			MUSTANG_PATH . '/languages/'
 		);

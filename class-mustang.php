@@ -67,7 +67,7 @@ class Mustang
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'awesomecoder';
+		$this->plugin_name = 'mustang';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -82,8 +82,8 @@ class Mustang
 	 *
 	 * - Mustang_Loader. Orchestrates the hooks of the plugin.
 	 * - Mustang_i18n. Defines internationalization functionality.
-	 * - Awesomecoder_Admin. Defines all hooks for the admin area.
-	 * - Awesomecoder_Public. Defines all hooks for the public side of the site.
+	 * - Mustang_Backend. Defines all hooks for the admin area.
+	 * - Mustang_Frontend. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -99,7 +99,6 @@ class Mustang
 		 * side of the site.
 		 */
 		require_once("vendor/autoload.php");
-
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
@@ -153,7 +152,7 @@ class Mustang
 		$this->loader->add_action('admin_enqueue_scripts', $plugin_backend, 'enqueue_scripts', 9999999999);
 
 		// create menu
-		// $this->loader->add_action('admin_menu', $plugin_backend, 'awesomecoder_admin_menu');
+		// $this->loader->add_action('admin_menu', $plugin_backend, 'admin_menu');
 	}
 
 	/**
