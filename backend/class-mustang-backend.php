@@ -125,7 +125,6 @@ class Mustang_Backend
 		 */
 
 		if (in_array($hook, $this->pages)) {
-			wp_enqueue_style("{$this->plugin_name}", MUSTANG_URL . 'assets/css/app.css', array(), (filemtime(MUSTANG_PATH . "assets/css/app.css") ?? $this->version), 'all');
 			wp_enqueue_style("{$this->plugin_name}", MUSTANG_URL . 'backend/css/backend.css', array(), (filemtime(MUSTANG_PATH . "backend/css/backend.css") ?? $this->version), 'all');
 		}
 	}
