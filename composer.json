@@ -1,9 +1,0 @@
-{
-    "autoload": {
-        "psr-4": {
-            "Plugin\\Controller\\": "controller/",
-            "Plugin\\Backend\\": "backend/",
-            "Plugin\\Frontend\\": "frontend/"
-        }
-    }
-}

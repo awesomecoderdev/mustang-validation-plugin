@@ -95,10 +95,57 @@ class Mustang
 	{
 
 		/**
-		 * The class responsible for defining all actions that occur in the public-facing
+		 * The class responsible for orchestrating the actions and filters of the
+		 * core plugin.
+		 */
+		require_once MUSTANG_PATH . 'controller/class-mustang-activator.php';
+
+		/**
+		 * The class responsible for orchestrating the actions and filters of the
+		 * core plugin.
+		 */
+		require_once MUSTANG_PATH . 'controller/class-mustang-deactivator.php';
+
+		/**
+		 * The class responsible for orchestrating the actions and filters of the
+		 * core plugin.
+		 */
+		require_once MUSTANG_PATH . 'controller/class-mustang-loader.php';
+
+		/**
+		 * The class responsible for defining internationalization functionality
+		 * of the plugin.
+		 */
+		require_once MUSTANG_PATH . 'controller/class-mustang-i18n.php';
+
+		/**
+		 * The class responsible for defining all actions that occur in the backend area.
+		 */
+		require_once MUSTANG_PATH . 'backend/class-mustang-backend.php';
+
+		/**
+		 * The class responsible for defining all actions that occur in the frontend-facing
 		 * side of the site.
 		 */
-		require_once("vendor/autoload.php");
+		require_once MUSTANG_PATH . 'frontend/class-mustang-frontend.php';
+
+		/**
+		 * The class responsible for defining metabox functionality
+		 * of the plugin.
+		 */
+		require_once MUSTANG_PATH . 'controller/class-mustang-shortcode.php';
+
+		/**
+		 * The class responsible for defining metabox functionality
+		 * of the plugin.
+		 */
+		require_once MUSTANG_PATH . 'controller/class-mustang-metabox.php';
+
+		/**
+		 * The class responsible for defining handler functionality
+		 * of the plugin.
+		 */
+		require_once MUSTANG_PATH . 'controller/class-mustang-handler.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
@@ -152,7 +199,7 @@ class Mustang
 		$this->loader->add_action('admin_enqueue_scripts', $plugin_backend, 'enqueue_scripts', 9999999999);
 
 		// create menu
-		// $this->loader->add_action('admin_menu', $plugin_backend, 'admin_menu');
+		$this->loader->add_action('admin_menu', $plugin_backend, 'admin_menu');
 	}
 
 	/**
