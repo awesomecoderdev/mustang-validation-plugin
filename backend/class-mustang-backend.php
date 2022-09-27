@@ -48,15 +48,6 @@ class Mustang_Backend
 	private  $pages;
 
 	/**
-	 * The metabox of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      array    $metabox    The metabox of this plugin.
-	 */
-	private  $metabox;
-
-	/**
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
@@ -71,11 +62,6 @@ class Mustang_Backend
 
 		$this->pages = [
 			"toplevel_page_mustang",
-		];
-
-		$this->metabox = [
-			"post.php",
-			"post-new.php",
 		];
 	}
 
@@ -142,11 +128,6 @@ class Mustang_Backend
 			wp_enqueue_style("{$this->plugin_name}", MUSTANG_URL . 'assets/css/app.css', array(), (filemtime(MUSTANG_PATH . "assets/css/app.css") ?? $this->version), 'all');
 			wp_enqueue_style("{$this->plugin_name}", MUSTANG_URL . 'backend/css/backend.css', array(), (filemtime(MUSTANG_PATH . "backend/css/backend.css") ?? $this->version), 'all');
 		}
-
-		// metabox css
-		if (in_array($hook, $this->metabox)) {
-			wp_enqueue_style("{$this->plugin_name}-metabox", MUSTANG_URL . 'backend/css/metabox.css', array(), filemtime(MUSTANG_PATH . "backend/css/metabox.css"), 'all');
-		}
 	}
 
 	/**
@@ -178,11 +159,6 @@ class Mustang_Backend
 
 		if (in_array($hook, $this->pages)) {
 			wp_enqueue_script("{$this->plugin_name}-backend", MUSTANG_URL . 'backend/js/backend.js', array('jquery'), (filemtime(MUSTANG_PATH . "backend/js/backend.js") ?? $this->version), true);
-		}
-
-		// metabox css
-		if (in_array($hook, $this->metabox)) {
-			wp_enqueue_script("{$this->plugin_name}-metabox", MUSTANG_URL . 'backend/js/metabox.js', array('jquery'), (filemtime(MUSTANG_PATH . "backend/js/metabox.js") ?? $this->version), true);
 		}
 	}
 }
